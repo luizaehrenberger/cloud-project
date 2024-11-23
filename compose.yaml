@@ -1,0 +1,23 @@
+services:
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: projeto
+      POSTGRES_USER: projeto_user
+      POSTGRES_PASSWORD: projeto_password
+    ports:
+      - "5432:5432"
+
+  app:
+    image: luizaehrenberger/cloud-project-app
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    environment:
+      PYTHONPATH: "/app"
+      POSTGRES_USER: projeto_user
+      POSTGRES_PASSWORD: projeto_password
+      POSTGRES_DB: projeto
+      JWT_SECRET: mysecretkey
+    restart: on-failure

@@ -1,0 +1,28 @@
+# Nome do site
+site_name: Projeto Cloud - API Restful e AWS
+
+# URL do repositório
+repo_url: https://github.com/luizaehrenberger/cloud-project.git
+
+# Tema
+theme:
+  name: material
+
+# Navegação
+nav:
+  - Home: index.md
+  - Endpoints:
+      - Registrar Usuário: endpoints/registrar.md
+      - Login de Usuário: endpoints/login.md
+      - Consulta de Dados: endpoints/consultar.md
+  - Deploy:
+      - Dockerização: deploy/docker.md
+      - Deploy No AWS: deploy/aws.md
+
+# Extensões de Markdown
+markdown_extensions:
+  - admonition
+  - codehilite
+  - tables
+  - toc:
+      permalink: true

@@ -1,5 +1,6 @@
+#peguei do site https://github.com/github/gitignore/blob/main/Python.gitignore
 # Byte-compiled / optimized / DLL files
-__pycache__/
+_pycache_/
 *.py[cod]
 *$py.class
 
@@ -112,7 +113,7 @@ ipython_config.py
 .pdm-build/
 
 # PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
-__pypackages__/
+_pypackages_/
 
 # Celery stuff
 celerybeat-schedule
@@ -123,6 +124,7 @@ celerybeat.pid
 
 # Environments
 .env
+.venv/
 .venv
 env/
 venv/

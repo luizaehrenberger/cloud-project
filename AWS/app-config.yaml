@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app
+  namespace: cloud-project
+  labels:
+    app: app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app
+  template:
+    metadata:
+      labels:
+        app: app
+    spec:
+      containers:
+      - name: app
+        image: luizaehrenberger/cloud-project-app
+        ports:
+        - containerPort: 8080
+        env:
+        - name: PYTHONPATH
+          value: "/app"
+        - name: POSTGRES_USER
+          value: "projeto_user"
+        - name: POSTGRES_PASSWORD
+          value: "projeto_password"
+        - name: POSTGRES_DB
+          value: "projeto"
+        - name: JWT_SECRET
+          value: "mysecretkey"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: app-service
+spec:
+  selector:
+    app: app
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: 8080
+  type: LoadBalancer

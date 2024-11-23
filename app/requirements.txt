@@ -1,0 +1,20 @@
+fastapi
+uvicorn
+sqlalchemy
+psycopg2-binary
+pydantic
+passlib
+bcrypt
+PyJWT
+psycopg2-binary  # Driver para PostgreSQL
+sqlalchemy  # ORM para manipulação do banco de dados
+bcrypt  # Para hashing de senhas
+pydantic  # Para validação de dados
+python-jose  # Para gerar e verificar tokens JWT
+requests  # Para fazer requisições HTTP, se necessário (para scraping, por exemplo)
+beautifulsoup4  # Para parsing de HTML
+uvicorn[standard]
+passlib
+mkdocs
+mkdocs-material  # Um tema estilizado popular para MkDocs
+python-dotenv  # Para carregar variáveis de ambiente de um arquivo .env
