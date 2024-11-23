@@ -31,7 +31,7 @@ Utilizando o EKSCTL para a gestão de cluster EKS. <br>
 `aws eks --region us-east-1 update-kubeconfig --name cluster-lu` <br>
 5. Arquivo `app-config.yaml` para o deployment. <br>
 6. Arquivo `db-config.yaml` para o deployment da base de dados.<br>
-7. Aplicação os arquivos `kubectl apply -f (app/db)-config.yaml -n cloud-project`<br>
+7. Aplicação dos arquivos `kubectl apply -f (app/db)-config.yaml -n cloud-project`<br>
 8. Para obter o link: `kubectl get svc -n cloud-project`<br>
 9. Resultado: `curl http://a82c0a93257ec433189a7611363e86be-977945615.us-east-1.elb.amazonaws.com:8080`<br>
 
